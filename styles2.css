@@ -1,0 +1,91 @@
+* {
+	box-sizing: border-box;
+}
+
+/* prettier-ignore */
+body, div, h2, p{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	background-color: #333;
+	color: #fff;
+	width: 100vw;
+	height: 100vh;
+	font-family: sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1f);
+	grid-template-rows: repeat(1, 1f);
+	gap: 5px;
+	width: 60%;
+	height: 60%;
+	margin: 50px auto;
+	display: flex;
+	border-radius: 15px;
+}
+
+.card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 5px 2px #ffff00;
+	border-radius: 15px;
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.textos {
+	position: absolute;
+	color: #fff;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	text-align: center;
+	width: 60%;
+	bottom: 70px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.icono {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+}
+
+.ico {
+	font-size: 50px !important;
+	transition: transform 0.3s ease-in-out;
+}
+
+.icono1 {
+	background-color: #daa520;
+}
+
+.icono2 {
+	background-color: #a36d45;
+}
+
+.card:hover .icono {
+	border-radius: 50%;
+	transform: scale(30%, 30%) translate(10px, -200px);
+	transition: 2s;
+}
+
+.card:hover .textos {
+	opacity: 1;
+	transition: 3s;
+}
+
+.card:hover .icono .ico {
+	transform: scale(2);
+}
